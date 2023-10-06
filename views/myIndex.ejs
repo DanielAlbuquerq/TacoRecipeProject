@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/myMain.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Gabarito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap" rel="stylesheet">
+
+    <title>Mobile Experiment Template</title>
+</head>
+<body>
+    <br>
+    <br>
+    <main>
+    
+        <header>
+          <div class="feature"></div>
+          <div class="feature"></div>
+        </header>
+        
+        <div id="app">
+          
+          <header>
+             <div class="system-bar">
+              <div class="left">No Carrier</div>
+              
+              <div id="cent" class="centre"></div>
+               <div class="right"><span class="ion-battery-full"><iconify-icon icon="ion:battery-dead-outline"></iconify-icon></span></div>
+            </div>
+
+            <div class="navbarDaniel">
+                <div class="left">
+                <span class="ion-chevron-left"></span>
+                </div>
+
+                <div class="centre">
+                    Taco Town
+                </div>
+                
+                <div class="right">
+                <span class="ion-navicon"></span>
+                </div>
+            </div>
+          </header>
+        <!-- Form to decide the product__________START____________ -->
+        
+            <h3>The Best Recipe App1</h3>
+        
+
+        <div class="page">
+ 
+        <h4 style="font-size: 14px;">Pick your favourite taco ingredient</h4>
+
+          <form action="/recipe" method="POST" class="buttons">
+            <button type="submit" value="chicken" name="choice">🍗</button>
+            <button type="submit" value="beef" name="choice">🥩</button>
+            <button type="submit" value="fish"  name="choice">🐟</button>
+            
+          </form>
+
+        
+          <%if (locals.recipe) {%>
+
+            <h2 id="recipeTitle">
+              <%= recipe.name %>
+            </h2>
+            
+            <h3>Ingredients:</h3>
+            <ul id="ingredientsList">
+              <li>
+                <%= recipe.ingredients.protein.name %>, <%= recipe.ingredients.protein.preparation %>
+              </li>
+              <li>
+                <%= recipe.ingredients.salsa.name %>
+      
+              </li>
+              <% recipe.ingredients.toppings.forEach(topping=> { %>
+                <li>
+                  <%= topping.quantity %> of <%= topping.name %>
+                </li>
+                <% }) %>
+            </ul>
+            
+            <%}else {%>
+
+              <div class="madeBY_div" id="navbarNav">
+                <div class="badge bg-warning" style="margin: 0px; background-color: rgb(255, 230, 0);">Made by:</div>
+                <p style=" font-family: 'Dancing Script', cursive;
+                font-size: 30px;">Daniel Mendes de Albuquerque</p>
+             </div>
+                <%}%>
+            </div>
+        
+
+        <!-- Form to decide the product__________END____________ -->
+
+
+
+          <!-- <div class="page"><p>PBR&B affogato humblebrag slow-carb hoodie. Irony shoreditch bushwick, readymade small batch hella cliche before they sold out sustainable keytar slow-carb franzen messenger bag kinfolk trust fund. Polaroid chambray trust fund, brooklyn distillery skateboard freegan etsy raw denim health goth XOXO. Meditation biodiesel jean shorts, wayfarers cardigan paleo green juice tote bag fixie authentic. Tattooed try-hard sustainable microdosing, man bun whatever leggings polaroid you probably haven't heard of them tumblr. Craft beer retro leggings readymade synth, keytar selvage direct trade. Church-key drinking vinegar retro, shoreditch gochujang post-ironic YOLO cardigan stumptown.</p>
+      
+      <p>Artisan keytar fingerstache, pitchfork banjo fashion axe keffiyeh squid meggings tattooed retro disrupt meditation intelligentsia marfa. Banjo iPhone put a bird on it, drinking vinegar small batch squid chambray artisan bushwick twee kinfolk semiotics four loko. Tilde brooklyn fap, salvia truffaut four loko everyday carry franzen quinoa aesthetic tote bag drinking vinegar meggings ugh. Knausgaard vinyl mixtape tacos fap pug. Chambray lo-fi crucifix skateboard, synth before they sold out taxidermy pitchfork food truck. YOLO authentic fingerstache, ennui next level hoodie waistcoat meggings listicle. Gentrify flannel yr pinterest.</p>
+      
+      <p>Raw denim food truck stumptown photo booth tumblr shoreditch. Shabby chic cardigan bushwick, you probably haven't heard of them blog cray cronut irony brunch green juice try-hard kinfolk food truck plaid. Twee readymade chicharrones, VHS kombucha pabst vinyl fixie 8-bit meggings leggings green juice selfies. Vinyl yr VHS, blue bottle echo park marfa vegan mlkshk pitchfork 3 wolf moon waistcoat swag jean shorts. Forage cold-pressed messenger bag wolf readymade occupy. Authentic 90's biodiesel literally. Keytar fashion axe roof party, truffaut iPhone poutine pug mlkshk selvage cliche before they sold out affogato everyday carry disrupt tousled.</p>
+          </div> -->
+
+          <footer>
+            <a href="/return" class="left" >Left</a>
+            <div class="centre" style="cursor: not-allowed;">Center</div>
+            <div class="right" style="cursor: not-allowed;">Right</div
+          </footer>
+        </div>
+       
+        <footer>
+          <div class="feature"></div>
+        </footer>
+        
+      </main>
+      <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+</html>
