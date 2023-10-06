@@ -195,17 +195,15 @@ div.page::-webkit-scrollbar {
   
   .left {
     float:left;
-    width:20%;
     text-align:left;
   }
   .centre {
     float:left;
-    width:60%;
+    padding-right: 10px;
     text-align:center;
   }
   .right {
     float:right;
-    width:20%;
     text-align:right;
   }
   
@@ -235,6 +233,7 @@ div.page::-webkit-scrollbar {
   
   .navbarDaniel{
     display: flex;
+    justify-content: space-between;
   }
 
   h2{
@@ -281,4 +280,14 @@ div.page::-webkit-scrollbar {
     color: #302d2d;
   }
 
- 
+footer{
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+ul{
+  padding: 0;
+}
