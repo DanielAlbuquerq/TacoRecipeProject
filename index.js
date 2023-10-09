@@ -4,7 +4,7 @@ import 'dotenv/config';
 
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3002;
 
 //Step 1: You can go to the recipe.json file to see the full structure of the recipeJSON below.
 const recipeJSON =
@@ -19,7 +19,6 @@ let data;
 app.get("/", (req, res) => {
   res.render("index.ejs",{recipe: data});
 });
-
 
 app.post("/recipe", (req, res) => {
 

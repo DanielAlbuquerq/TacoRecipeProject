@@ -226,7 +226,7 @@ div.page::-webkit-scrollbar {
 
   form button:hover{
     
-    background-color: rgb(85, 147, 158);
+    background-color: rgb(126, 107, 197);
     width: 80%;
     border-radius: 50px;
   }
@@ -249,17 +249,18 @@ div.page::-webkit-scrollbar {
     text-decoration:none;
     text-align: center;
     color: #fff;
-    background-color: rgb(78, 78, 199);
+    background-color: rgb(115, 115, 184);
     width: 40px;
     height: 25px;
     border-radius: 8px;
   }
 
   a.left:hover{
-    background-color: rgb(155, 155, 211);
+    background-color: rgb(169, 169, 204);
   }
 
   button{
+    border: 4px solid rgb(222, 219, 233);
     cursor: pointer;
   }
   .madeBY_div{
